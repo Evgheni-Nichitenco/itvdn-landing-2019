@@ -2,3 +2,8 @@
 ## Перед стартом проекта необходимо:
 
 node -v
+npm -v
+
+README.md
+git.ighore
+
