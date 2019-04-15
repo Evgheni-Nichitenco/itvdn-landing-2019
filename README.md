@@ -16,3 +16,7 @@ npm install gulp-pug --save-dev
 
 Создаем gulpfile.js
 
+npm install eslint
+
+gulp --tasks   Посмотреть все таски
+
