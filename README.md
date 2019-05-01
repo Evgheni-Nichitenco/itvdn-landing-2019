@@ -20,3 +20,28 @@ npm install eslint
 
 gulp --tasks   Посмотреть все таски
 
+npm i gulp-sass --save-dev
+npm i gulp.spritesmith --save-dev
+npm i rimraf --save-dev
+
+## Pug
+
+        ul.list
+            each link in links
+                li.list__item
+                    if link === 'Home'
+                        span=link
+                    else
+                        a(href="#").list__link=link
+
+        ul
+            each link in anoterLinks
+                li
+                    if link === 'AnoterHome'
+                        span=link
+                    else
+                        a(href="#")=link
+
+
+
+

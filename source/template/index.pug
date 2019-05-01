@@ -7,4 +7,22 @@ html(lang='ru')
         link(rel="stylesheet" href="css/main.min.css")
         title Тестовый лендинг
     body
-        h1 This is a cool project
+        - var links = ['Home', 'Contacts', 'About', 'Price']
+        - var anoterLinks = ['AnoterHome', 'AnoterContacts']
+
+
+        ul.list
+            each link in links
+                li.list__item
+                    if link === 'Home'
+                        span=link
+                    else
+                        a(href="#").list__link=link
+
+        ul
+            each link in anoterLinks
+                li
+                    if link === 'AnoterHome'
+                        span=link
+                    else
+                        a(href="#")=link
