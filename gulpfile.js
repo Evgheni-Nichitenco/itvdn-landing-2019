@@ -7,8 +7,6 @@ const rimraf = require('rimraf');
 const rename = require('gulp-rename');
 
 
-
-
 /* -------- Server  -------- */
 gulp.task('server', function() {
   browserSync.init({
@@ -21,6 +19,7 @@ gulp.task('server', function() {
   gulp.watch('build/**/*').on('change', browserSync.reload);
 });
 
+
 /* ------------ Pug compile ------------- */
 gulp.task('templates:compile', function buildHTML() {
   return gulp.src('source/template/index.pug')
@@ -30,6 +29,7 @@ gulp.task('templates:compile', function buildHTML() {
     .pipe(gulp.dest('build'))
 });
 
+
 /* ------------ Styles compile ------------- */
 gulp.task('styles:compile', function () {
   return gulp.src('source/styles/main.scss')
@@ -37,6 +37,7 @@ gulp.task('styles:compile', function () {
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('build/css'));
 });
+
 
 /* ------------ Sprite ------------- */
 gulp.task('sprite', function(cb) {
@@ -51,10 +52,12 @@ gulp.task('sprite', function(cb) {
   cb();
 });
 
+
 /* ------------ Delete ------------- */
 gulp.task('clean', function del(cb) {
   return rimraf('build', cb);
 });
+
 
 /* ------------ Copy fonts ------------- */
 gulp.task('copy:fonts', function() {
@@ -62,14 +65,17 @@ gulp.task('copy:fonts', function() {
     .pipe(gulp.dest('build/fonts'));
 });
 
+
 /* ------------ Copy images ------------- */
 gulp.task('copy:images', function() {
   return gulp.src('./source/images/**/*.*')
     .pipe(gulp.dest('build/images'));
 });
 
+
 /* ------------ Copy ------------- */
 gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images'));
+
 
 /* ------------ Watchers ------------- */
 gulp.task('watch', function() {
