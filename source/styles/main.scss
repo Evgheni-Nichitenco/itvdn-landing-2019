@@ -2,13 +2,17 @@
 @import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min");
 // @import "../../node_modules/font-awesome/scss/font-awesome.scss";
 
+@import "global/mixin";
 @import "global/font";
 @import "global/vars";
 @import "global/base";
 @import "global/common";
 @import "global/sprite";
+@import "global/icons";
 @import "global/button";
 
+@import "sections/title";
 @import "sections/header";
 @import "sections/nav";
 @import "sections/hero";
+@import "sections/about";
